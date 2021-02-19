@@ -44,12 +44,13 @@ def object_detection(img_path, threshold=0.5, rect_th=2, text_size=2, text_th=2)
     img = cv2.imread(img_path)  # Read image with cv2
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)  # Convert to RGB
     boxes, pred_cls = get_prediction(img_path, threshold)  # Get predictions
-    count_classes={}
-    distincts_classes=set(pred_cls)
+    count_classes = {}
+    distincts_classes = set(pred_cls)
+    print(len(boxes))
     for i in range(len(boxes)):
         for cls in distincts_classes:
-         if pred_cls[i]==cls:
-            count_classes[cls]=count_classes.get(cls,0)+1
+            if pred_cls[i] == cls:
+                count_classes[cls] = count_classes.get(cls, 0) + 1
         cv2.rectangle(img, boxes[i][0], boxes[i][1], color=(0, 255, 0),
                       thickness=rect_th)  # Draw Rectangle with the coordinates
         cv2.putText(img, pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX, text_size, (0, 255, 0),
