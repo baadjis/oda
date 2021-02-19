@@ -33,7 +33,7 @@
 
 	   <img src="{{ url_for('predicted_image', filename=predicted) }}" class="fluid" alt="image">
        <p>
-		   <h1>Detect objects</h1>
+		   <h1>Detected objects</h1>
 		      {% for key, value in count_classes.items() %}
 
       				<h3>{{key}}:{{value}}</h3>
