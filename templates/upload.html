@@ -3,10 +3,27 @@
     <head>
 		<title>oda</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+		.main{
+			horiz-align: center;
+		}
+		form{
+			horiz-align: center;
+			transform: translateX(10%);
+		}
+		.h1-title{
+			horiz-align: center;
+
+			transform: translateX(10%);
+		}
+
+	</style>
+
+	</head>
 <body>
-<h2>Select your image</h2>
+<section class="main">
+<h1 class="h1-title">Select your image</h1>
 <p>
 	{% with messages = get_flashed_messages() %}
 	  {% if messages %}
@@ -52,5 +69,7 @@
 
 	</div>
 </form>
+
+	</section>
 </body>
 </html>
