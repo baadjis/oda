@@ -62,13 +62,13 @@ def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
 
-@app.route('/predicted/<filename>')
+"""@app.route('/predicted/<filename>')
 def predicted_image(filename):
     # print('display_image filename: ' + filename)
     # object_detection_api('static/uploads/'+filename, rect_th=2, text_th=1, text_size=1)
 
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
-
+"""
 if __name__ == "__main__":
     app.run()
