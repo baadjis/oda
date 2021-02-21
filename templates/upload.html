@@ -54,14 +54,14 @@
 	  {% endif %}
 	{% endwith %}
 </p>
-{% if filename %}
+
 	<div class="text-center">
-		<img id="preview" src="{{ url_for('display_image', filename=filename) }}" class="fluid" alt="image">
+		<img id="previewimage" src="#" class="fluid">
 
-
+       <br>
 	</div>
 
-{% endif %}
+
 
 {% if predicted %}
 
@@ -80,7 +80,7 @@
 {% endif %}
 <form method="post" action="/" enctype="multipart/form-data">
     <div class="form-group">
-
+        <br>
 		<label for="imageUpload" class="upload-label">
             upload...
         </label>
