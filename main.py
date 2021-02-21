@@ -48,7 +48,7 @@ def upload_image():
         count_classes = object_detection(path)
 
         flash('Image successfully uploaded and displayed below')
-        return render_template('upload.html', filename='uploaded.jpg', predicted='predicted.jpg',count_classes=count_classes)
+        return render_template('upload.html', predicted='predicted.jpg',count_classes=count_classes)
     else:
         flash('Allowed image types are -> png, jpg, jpeg, gif')
         return redirect(request.url)
